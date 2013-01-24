@@ -20,6 +20,8 @@ Access [Google API's Console](https://code.google.com/apis/console/) and configu
 ~~~
 
 ## Languages
+Get all supported languages
+
 gTranslate.languages(callback);
 ~~~.ruby
   gTranslate.languages(function(languages){
@@ -28,9 +30,11 @@ gTranslate.languages(callback);
 ~~~
 
 ## Translate
+Translate text passed as first parameter
+
 gTranslate.translate(text, from, to, callback);
 ~~~.ruby
-  gTranslate.languages("Hello World", "en", "pt", function(translate){
+  gTranslate.translate("Hello World", "en", "pt", function(translate){
     
     # Receives an object that contains the 'translatedText' key.
 
@@ -39,6 +43,8 @@ gTranslate.translate(text, from, to, callback);
 ~~~
 
 ## Detect
+Detects the language.
+
 gTranslate.detect(text, callback);
 ~~~.ruby
   gTranslate.detect("Hello World", function(language){
