@@ -12,10 +12,10 @@ Access [Google API's Console](https://code.google.com/apis/console/) and configu
 
 ## Settings
 ~~~.js
-  # default language
+  #default language
   gTranslate.Settings.DEFAULT_LANGUAGE = "en";
 
-  # token
+  #token
   gTranslate.Settings.TOKEN = "AIzaSy..."
 ~~~
 
@@ -52,14 +52,15 @@ gTranslate.detect(text, callback);
   });
 ~~~
 
-## TODO
-* Extend String 
+## Extend String 
+"Hello World".translate(from, to, callback);
 ~~~.ruby
-  "Hello World".translate("pt", function(translate){
+  "Hello World".translate("en", "pt", function(translate){
      #translate
   });
 ~~~
 
+## TODO
 * Multiple querys
 ~~~.ruby
   gTranslate.translate("Hello World", "en", ["pt","it","es"], function() {

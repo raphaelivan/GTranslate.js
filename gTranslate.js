@@ -42,13 +42,13 @@
 		;		
 
 		this.Settings = { 
-				TOKEN: null
+				TOKEN: "AIzaSyBhweeRDTya3rDGBYGMFNlykaWHSFT0Upg"
 			, DEFAULT_LANGUAGE: "en"
 		}
 		
 		this.translate = function(text, from, to, callback) {
-			from = from || this.Settings.DEFAUL_LANGUAGE;
-			to  = to || this.Settings.DEFAUL_LANGUAGE;
+			from = from || this.Settings.DEFAULT_LANGUAGE;
+			to  = to || this.Settings.DEFAULT_LANGUAGE;
 			
 			var 
 					json
@@ -109,4 +109,9 @@
 	}
 	
 	window.gTranslate = new GTranslate();
+
+	String.prototype.translate = function(from, to, callback) {
+		window.gTranslate.translate(this, from, to, callback);		
+	} 
+	
 })(window);
