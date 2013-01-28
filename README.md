@@ -62,11 +62,6 @@ gTranslate.detect(text, callback);
 
 ## TODO
 * Multiple querys
-~~~.ruby
-  gTranslate.translate("Hello World", "en", ["pt","it","es"], function() {
-    #returns 'hello world' in pt, it and es.
-  });
-~~~
 
 ## License
 GTranslate.js is available under the MIT license.
